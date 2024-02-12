@@ -2,10 +2,9 @@ import React, { Component } from "react";
 
 export class NewsItem extends Component {
   render() {
-    let { title, description, imageUrl, newsUrl, author, date, source } =
-      this.props;
+    let { title, description, imageUrl, newsUrl, author, date, source } =this.props;
     return (
-      <div>
+      <div className="my-3">
         <div className="card" style={{ width: " 18rem" }}>
           <img
             src={
@@ -16,7 +15,7 @@ export class NewsItem extends Component {
             className="card-img-top"
             alt="..."
           />
-          <span className="position-absolute top-0  translate-middle badge rounded-pill bg-primary">
+          <span className="position-absolute top-0  translate-middle badge rounded-pill bg-primary" >
             {source}
           </span>
           <div className="card-body">
@@ -39,6 +38,7 @@ export class NewsItem extends Component {
           </div>
         </div>
       </div>
+      
     );
   }
 }
